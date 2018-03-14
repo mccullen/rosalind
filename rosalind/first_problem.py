@@ -15,6 +15,8 @@
 # Sample Output
 # 20 12 17 21
 
+import sys
+
 def count_dna_nucleitoids(sequence):
     nAdenine = 0
     nCystosine = 0
@@ -31,3 +33,8 @@ def count_dna_nucleitoids(sequence):
         elif nucleobase == "T":
             nThymine += 1
     return "{} {} {} {}".format(str(nAdenine), str(nCystosine), str(nGuanine), str(nThymine))
+
+if __name__ == "__main__":
+    sequence = sys.argv[1]
+    print(sequence)
+    print(count_dna_nucleitoids(sequence))
