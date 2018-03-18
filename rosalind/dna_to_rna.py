@@ -14,8 +14,8 @@ def transcribe_into_dna(rna_sequence):
     return rna_sequence.replace("T", "U")
 
 if __name__ == "__main__":
-    if len(sys.argv) < 3:
-        print("usage: python <path-to-rna-sequence> <output>")
+    if len(sys.argv) != 3:
+        print("usage: python {0} <path-to-rna-sequence> <output-path>".format(sys.argv[0]))
         sys.exit(1)
 
     with open(sys.argv[1], "r") as rna_input, open(sys.argv[2], "w") as dna_output:
